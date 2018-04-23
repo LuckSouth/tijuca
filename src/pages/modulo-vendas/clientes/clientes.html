@@ -1,37 +1,30 @@
-<!--
-  Generated template for the ClientesPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
- 
+
   <ion-navbar color="tijuca">
-      <ion-title class="titulo">Clientes </ion-title>
-        <ion-buttons end>
-          <ion-icon name="refresh" (click)="linkSincronizar()" class="refresh"></ion-icon>
-        </ion-buttons>
-    </ion-navbar>  
+    <ion-title class="titulo">Clientes </ion-title>
+    <ion-buttons end>
+      <ion-icon name="refresh" (click)="linkSincronizar()" class="refresh"></ion-icon>
+    </ion-buttons>
+  </ion-navbar>
 </ion-header>
 
 
-<ion-content> 
- 
- <div class="search">
+<ion-content padding>
+
   <ion-searchbar (ionInput)="getItems($event)" placeholder="Buscar"></ion-searchbar>
-</div> <br> <br>
-<div  style="margin-top:auto">
+
   <div *ngFor="let item of items">
-    <ng-template [ngIf]="item.limiteCredito >= 1000" [ngIfElse]="limiteBaixo">
+    <ng-template [ngIf]="item.limite >= 1000" [ngIfElse]="limiteBaixo">
       <ion-card class="redcard" (click)="e(item.id_cliente); presentActionSheet()">
         <ion-card-header class="redcard">
-          {{item.nome}}
+          {{item.nome_cliente}}
         </ion-card-header>
         <ion-card-content>
           <span class="cnpj">{{item.cnpj}}</span>
 
+          <span>{{item.limite}}</span>
 
-          <span class="cod">{{item.codigoCliente}}</span>
+          <span class="cod">{{item.id_cliente}}</span>
         </ion-card-content>
       </ion-card>
     </ng-template>
@@ -39,16 +32,16 @@
     <ng-template #limiteBaixo>
 
 
-      <ion-card (click)="e(item.codigoCliente); presentActionSheet()">
+      <ion-card (click)="e(item.id_cliente); presentActionSheet()">
         <ion-card-header>
-          {{item.nome}}
+          {{item.nome_cliente}}
         </ion-card-header>
         <ion-card-content>
           <span class="cnpj">{{item.cnpj}}</span>
 
-         <!-- <span>{{item.limite}}</span> -->
+          <span>{{item.limite}}</span>
 
-          <span class="cod">{{item.codigoCliente}}</span>
+          <span class="cod">{{item.id_cliente}}</span>
         </ion-card-content>
       </ion-card>
 
@@ -56,5 +49,4 @@
     </ng-template>
 
   </div>
-</div>
 </ion-content>

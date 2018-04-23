@@ -1,0 +1,63 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title class="title">Pedido</ion-title>
+        <ion-buttons end>
+            <ion-icon name="refresh" (click)="linkSincronizar()" class="refresh"></ion-icon>
+        </ion-buttons>
+    </ion-navbar>
+
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list>
+        <ion-item>
+            <ion-label color="dark">Nº Pedido:</ion-label>
+            <ion-input type="text" value="00000" disabled=""></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="dark">Data:</ion-label>
+            <ion-input type="text" value="00/00/2018" disabled=""></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="dark">Chegada:</ion-label>
+            <ion-input type="text" value="00/00/2018" disabled=""></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="dark">Limite de Crédito:</ion-label>
+            <ion-textarea type="text" value="R$ 1.000,00" disabled=""></ion-textarea>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="dark">Saldo:</ion-label>
+            <ion-input type="text" value="R$ 1.000,00" disabled=""></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="dark">Categoria:</ion-label>
+            <ion-input type="text" value="1" disabled=""></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="dark">Qauntidade de Item:</ion-label>
+            <ion-input type="text" value="0" disabled=""></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="dark">Valor Total:</ion-label>
+            <ion-input type="text" value="0" disabled=""></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="dark">Data Entrega:</ion-label>
+            <ion-input type="text" value="00/00/2018" disabled=""></ion-input>
+        </ion-item>
+    </ion-list>
+
+</ion-content>

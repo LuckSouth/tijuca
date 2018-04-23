@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavParams } from 'ionic-angular';
+import { IonicPage, NavParams, LoadingController } from 'ionic-angular';
 import { NavController } from 'ionic-angular/navigation/nav-controller';
 import { Storage } from '@ionic/storage/es2015/storage';
 import { StorageProvider } from '../../providers/storage/storage';
@@ -10,6 +10,7 @@ import { VendasPage } from '../modulo-vendas/vendas/vendas';
 import { EnviarProvider } from "../../providers/enviar/enviar";
 import { RecuperarDadosProvider } from '../../providers/recuperar-dados/recuperar-dados';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { PrincipalPage } from '../principal/principal/principal';
 
 
 @IonicPage()
@@ -46,7 +47,8 @@ export class LoginPage {
     public enviar: EnviarProvider,
     public alert: AlertController,
     public recuperarDados: RecuperarDadosProvider,
-    public alertCtrl: AlertController
+    public alertCtrl: AlertController,
+    public loadingCtrl: LoadingController
   ) {
     // this.recuperarDados.fornecedores('nome', 'produtos');
     // this.recuperarDados.produtos('nome', 'produtos');
@@ -103,12 +105,30 @@ export class LoginPage {
   }
 
   loginCorreto() {
+
     let alerta = this.alertCtrl.create({
       title: 'Login',
       subTitle: 'Login realizado com sucesso',
       buttons: ['Ok']
     });
     alerta.present();
+
+    let loading = this.loadingCtrl.create({
+      content: 'Aguarde...'
+    });
+
+    loading.present();
+
+    setTimeout(() => {
+      this.navCtrl.push(PrincipalPage);
+    }, 2000);
+
+    setTimeout(() => {
+      loading.dismiss();
+    }, 2000);
+
+    // this.navCtrl.push(PrincipalPage);
+
   }
 
   verificarLogin(usuario, senha) {

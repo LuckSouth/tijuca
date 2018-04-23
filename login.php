@@ -79,6 +79,7 @@ $data = array();
 try {
     $stmt = $pdo->query("SELECT `senha` FROM `usuarios` WHERE `login` = 'estagiario'");
     while ($row = $stmt->fetch(PDO::FETCH_OBJ)) {
+        echo "SELECT `senha` FROM `usuarios` WHERE `login` = 'estagiario'";
         // Assign each row of data to associative array
         $data[] = $row;
     }

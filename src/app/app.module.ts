@@ -52,8 +52,10 @@ import { PedidosPage } from '../pages/modulo-vendas/pedidos/pedidos';
 import { TabelasPage } from '../pages/modulo-vendas/tabelas/tabelas';
 import { SubprodutosPage } from '../pages/modulo-vendas/pesquisas/subpesquisas/subprodutos/subprodutos';
 import { FinanceiroPage } from '../pages/modulo-vendas/clientes/venda/financeiro/financeiro';
-import { PedidoPage } from '../pages/modulo-vendas/clientes/venda/pedido/pedido';
+import { PedidoPage } from '../pages/modulo-vendas/clientes/venda/pedido/pedido/pedido';
 import { InformacoesPage } from '../pages/modulo-vendas/clientes/venda/informacoes/informacoes';
+import { IncluirPedidoPage } from '../pages/modulo-vendas/clientes/venda/pedido/incluir-pedido/incluir-pedido';
+import { ItensPage } from '../pages/modulo-vendas/clientes/venda/pedido/itens/itens';
   
 @NgModule({
   declarations: [
@@ -85,6 +87,8 @@ import { InformacoesPage } from '../pages/modulo-vendas/clientes/venda/informaco
     FinanceiroPage,
     PedidoPage,
     InformacoesPage,
+    IncluirPedidoPage,
+    ItensPage,
     TabelasPage
   ],
   imports: [
@@ -127,6 +131,8 @@ import { InformacoesPage } from '../pages/modulo-vendas/clientes/venda/informaco
     FinanceiroPage,
     PedidoPage,
     InformacoesPage,
+    IncluirPedidoPage,
+    ItensPage,
     TabelasPage
   ],
   providers: [
