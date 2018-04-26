@@ -1,22 +1,159 @@
 <ion-header>
-
   <ion-navbar>
-    <ion-title>pedidos</ion-title>
+    <ion-title center>
+      Pedidos
+    </ion-title>
   </ion-navbar>
+
+  <ion-toolbar>
+    <ion-searchbar (ionInput)="filterItems($event, view)"></ion-searchbar>
+    <ion-list>
+      <ion-item *ngFor="let item of items" click="a(item)">
+        {{ item }}
+      </ion-item>
+    </ion-list>
+  </ion-toolbar>
 
 </ion-header>
 
-
 <ion-content padding>
-    <ion-card>
+  <ion-card color="primary" (click)="presentActionSheet()">
 
-        <ion-card-header>
-          Card Header
-        </ion-card-header>
-      
-        <ion-card-content>
-          <!-- Add card content here! -->saddsa
-        </ion-card-content>
-      
-      </ion-card>
+    <ion-item>
+      <ion-label color="dark"> Nº Pedido </ion-label>
+      <ion-input type="text" value="123456" disabled=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="dark"> Código </ion-label>
+      <ion-input type="text" value="0" disabled=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="dark"> Data </ion-label>
+      <ion-input type="text" value="0" disabled=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="dark"> Cliente </ion-label>
+      <ion-input type="text" value="Fulano" disabled=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="dark"> Cod_Cliente </ion-label>
+      <ion-input type="text" value="123456" disabled=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="dark"> Situação </ion-label>
+      <ion-input type="text" value="Devendo" disabled=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="dark"> Valor </ion-label>
+      <ion-input type="text" value="315,00" disabled=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="dark"> Mensagem </ion-label>
+      <ion-input type="text" value="0" disabled=""></ion-input>
+    </ion-item>
+
+    <ion-icon name="md-checkmark">Enviado</ion-icon>
+
+  </ion-card>
+
+  <ion-card color="danger" (click)="presentActionSheet()">
+
+    <ion-item>
+      <ion-label color="dark"> Nº Pedido </ion-label>
+      <ion-input type="text" value="123456" disabled=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="dark"> Código </ion-label>
+      <ion-input type="text" value="0" disabled=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="dark"> Data </ion-label>
+      <ion-input type="text" value="0" disabled=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="dark"> Cliente </ion-label>
+      <ion-input type="text" value="Fulano" disabled=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="dark"> Cod_Cliente </ion-label>
+      <ion-input type="text" value="123456" disabled=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="dark"> Situação </ion-label>
+      <ion-input type="text" value="Devendo" disabled=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="dark"> Valor </ion-label>
+      <ion-input type="text" value="315,00" disabled=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="dark"> Mensagem </ion-label>
+      <ion-input type="text" value="Pedido já digitado para este cliente e grupo de produtos com a mesma data de entrega. Para passar os pedidos ligue para as vendas"
+        disabled=""></ion-input>
+    </ion-item>
+
+    <ion-icon name="md-close" item-start>Cancelado</ion-icon>
+
+  </ion-card>
+
+  <ion-card color="secondary" (click)="presentActionSheet()">
+
+    <ion-item>
+      <ion-label color="dark"> Nº Pedido </ion-label>
+      <ion-input type="text" value="123456" disabled=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="dark"> Código </ion-label>
+      <ion-input type="text" value="0" disabled=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="dark"> Data </ion-label>
+      <ion-input type="text" value="0" disabled=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="dark"> Cliente </ion-label>
+      <ion-input type="text" value="Fulano" disabled=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="dark"> Cod_Cliente </ion-label>
+      <ion-input type="text" value="123456" disabled=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="dark"> Situação </ion-label>
+      <ion-input type="text" value="Devendo" disabled=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="dark"> Valor </ion-label>
+      <ion-input type="text" value="315,00" disabled=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="dark"> Mensagem </ion-label>
+      <ion-input type="text" value="DADOS ENTREGA: Motorista: FULANO Telefone: (xx) 9-xxxx-xxxx" disabled=""></ion-input>
+    </ion-item>
+
+    <ion-icon name="md-arrow-round-up">Recebido</ion-icon>
+
+  </ion-card>
+
 </ion-content>

@@ -49,6 +49,7 @@ import { ProdutosPage } from '../pages/modulo-vendas/produtos/produtos';
 import { PesquisasPage } from '../pages/modulo-vendas/pesquisas/pesquisas';
 import { SincronizarPage } from '../pages/modulo-vendas/sincronizar/sincronizar';
 import { PedidosPage } from '../pages/modulo-vendas/pedidos/pedidos';
+import { Pedidos2Page } from '../pages/modulo-vendas/pedidos/pedidos2/pedidos2'
 import { TabelasPage } from '../pages/modulo-vendas/tabelas/tabelas';
 import { SubprodutosPage } from '../pages/modulo-vendas/pesquisas/subpesquisas/subprodutos/subprodutos';
 import { FinanceiroPage } from '../pages/modulo-vendas/clientes/venda/financeiro/financeiro';
@@ -86,6 +87,7 @@ import { ItensPage } from '../pages/modulo-vendas/clientes/venda/pedido/itens/it
     SubprodutosPage,
     FinanceiroPage,
     PedidoPage,
+    Pedidos2Page,
     InformacoesPage,
     IncluirPedidoPage,
     ItensPage,
@@ -124,6 +126,7 @@ import { ItensPage } from '../pages/modulo-vendas/clientes/venda/pedido/itens/it
     LoginPage,
     ClientesPage, 
     PedidosPage,
+    Pedidos2Page,
     PesquisasPage,
     ProdutosPage, 
     SincronizarPage, 

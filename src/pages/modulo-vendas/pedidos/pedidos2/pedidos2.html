@@ -1,0 +1,68 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Produto</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list>
+        <ion-item *ngFor="let item of items; let i = index" (click)="e(item.id_produto)">
+            <img class="galinha" src="assets/images/galinha.svg" />
+            <div class="quadraedo">
+                <span class="nome"> {{item.nome}}</span>
+                <br>
+                <span class="preco">Valor Unitário: {{item.preco}}</span>
+                <br>
+                <span class="quantidade">Quantidade: {{item.qtd}}</span>
+                <br>
+                <span class="quantidade">Valor Total: {{item.val}}</span>
+            </div>
+        </ion-item>
+
+    </ion-list>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <ion-list>
+
+        <ion-item>
+            <ion-label color="dark">Cliente:</ion-label>
+            <ion-input type="text" value="Fulano" disabled=""></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="dark">Valor Pedido:</ion-label>
+            <ion-input type="text" value="R$ 880,00" disabled=""></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="dark">Valor Total:</ion-label>
+            <ion-input type="text" value="R$ 880,00" disabled=""></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="dark">Data Pedido:</ion-label>
+            <ion-input type="text" value="12/04/2018" disabled=""></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="dark">Data Entrega:</ion-label>
+            <ion-input type="text" value="13/04/2018" disabled=""></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="danger">Data Vencimento:</ion-label>
+            <ion-input type="text" value="20/04/2018" disabled=""></ion-input>
+        </ion-item>
+
+    </ion-list>
+
+</ion-content>
